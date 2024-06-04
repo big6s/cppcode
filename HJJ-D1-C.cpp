@@ -6,15 +6,17 @@ int f[N], n, ans;
 int main() {
     freopen("code.in", "r", stdin);
     freopen("code.out", "w", stdout);
-    scanf("%d",&n);
+    ios::sync_with_stdio(0);
+    cin.tie(0),cout.tie(0);
+    cin>>n;
     for (int i = 1; i <= n; i++) {
-        scanf("%s",s[i].c_str());
+        cin>>s[i];
         f[i] = 1;
         for (int j = i - 1; j >= 1; j--)
             if (!s[i].find(s[j]))
                 f[i] = max(f[j] + 1, f[i]);
         ans = max(f[i], ans);
     }
-    printf("%d",ans);
+    cout<<ans;
     return 0;
 }
