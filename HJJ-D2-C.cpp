@@ -14,8 +14,8 @@ signed main() {
 		int mid = (l + r) >> 1;
 		if (check(mid)) r = mid - 1;
 		else {
-			ans = mid + 1;
 			l = mid + 1;
+			ans = l;
 		}
 	}
 	cout << ans;
