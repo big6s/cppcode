@@ -6,6 +6,10 @@
       "command": "D:/MinGW64/bin/g++.exe",
       "args": [
         "-fdiagnostics-color=always",
+				"-Wall",
+				"-Wextra",
+				"-std=c++14",
+				"-O2",
         "-g",
         "${file}",
         "-o",
